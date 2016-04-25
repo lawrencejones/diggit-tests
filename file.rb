@@ -1,7 +1,8 @@
 module Utils
   class Socket
-    def initialize(host)
+    def initialize(host, port)
       @host = host
+      @port = port
     end
   end
 end
