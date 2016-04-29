@@ -10,10 +10,10 @@ class Cloner
   end
 
   def clone_with_key(key)
-    keyfile = Tempfile.open('key')
-    keyfile.write(key)
-
-    clone
+    Tempfile.open('key') do |keyfile|
+      keyfile.write(key)
+      clone
+    end
   end
 
   private
