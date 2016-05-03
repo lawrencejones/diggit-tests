@@ -11,8 +11,12 @@ class Cloner
 
   def clone_with_key(key)
     Tempfile.open('key') do |keyfile|
-      keyfile.write(key)
-      clone
+      begin
+        keyfile.write(key)
+        clone
+      ensure
+        keyfile.unlink
+      end
     end
   end
 
