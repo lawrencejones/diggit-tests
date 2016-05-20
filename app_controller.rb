@@ -4,6 +4,7 @@ class AppController
            first: 'first',
            second: 'second',
            third: 'third',
-           fourth: 'fourth')
+           fourth: 'fourth',
+           fifth: 'fifth')
   end
 end
