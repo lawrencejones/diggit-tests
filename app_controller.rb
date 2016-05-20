@@ -3,6 +3,7 @@ class AppController
     render('app_template.html',
            first: 'first',
            second: 'second',
-           third: 'third')
+           third: 'third',
+           fourth: 'fourth')
   end
 end
